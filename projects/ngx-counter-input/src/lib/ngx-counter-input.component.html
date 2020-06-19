@@ -1,0 +1,9 @@
+<div class="input-group mb-0">
+	<div class="input-group-prepend">
+		<span class="time-controls pointer rounded-circle d-flex justify-content-center align-items-center" (click)="decrease()"><i class="fa fa-minus"></i></span>
+	</div>
+	<input type="text" class="form-control text-center input-transparent" readonly [(ngModel)]="counterValue">
+	<div class="input-group-append pointer">
+		<span class="time-controls pointer rounded-circle d-flex justify-content-center align-items-center" (click)="increase()"><i class="fa fa-plus"></i></span>
+	</div>
+</div>

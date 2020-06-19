@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.js" 
+            ]
           },
           "configurations": {
             "production": {
@@ -94,7 +96,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.js" 
+            ]
           }
         },
         "lint": {
@@ -123,6 +127,50 @@
           }
         }
       }
-    }},
-  "defaultProject": "NgxCatCounter"
+    },
+    "NgxCounterInput": {
+      "projectType": "library",
+      "root": "projects/ngx-counter-input",
+      "sourceRoot": "projects/ngx-counter-input/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-counter-input/tsconfig.lib.json",
+            "project": "projects/ngx-counter-input/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-counter-input/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-counter-input/src/test.ts",
+            "tsConfig": "projects/ngx-counter-input/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-counter-input/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-counter-input/tsconfig.lib.json",
+              "projects/ngx-counter-input/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "NgxCatCounter",
+  "cli": {
+    "analytics": false
+  }
 }
