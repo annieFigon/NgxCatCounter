@@ -38,11 +38,11 @@ To change the colors of the controls:
 Reactive Forms:
 ```
 <form [formGroup]="formulario">
-	<ngx-counter-input formControlName="time" [step]="15" [counterRangeMin]="15" [counterRangeMax]="240" [counterValue]="15"></ngx-counter>
+	<ngx-counter-input formControlName="time" [step]="15" [counterRangeMin]="15" [counterRangeMax]="240" [counterValue]="15"></ngx-counter-input>
 </form>
 ```
 
 NgModel:
 ```
-<ngx-counter-input [(ngModel)]="time" [step]="15" [counterRangeMin]="15" [counterRangeMax]="240" [counterValue]="15"></ngx-counter>
+<ngx-counter-input [(ngModel)]="time" [step]="15" [counterRangeMin]="15" [counterRangeMax]="240" [counterValue]="15"></ngx-counter-input>
 ```
