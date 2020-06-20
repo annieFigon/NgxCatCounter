@@ -4,6 +4,9 @@ Counter for Angular.
   - Compatible with Angular 9 🎆
 
 ### Installation 🔨
+```
+npm i ngx-counter-input
+```
 Add in app.module.ts
 ```
 import { NgxCounterInputModule } from 'ngx-counter-input';
